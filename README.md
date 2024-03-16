@@ -32,7 +32,7 @@ File output
 ```
 
 ## Contributing and Bug Reporting
-To contribute to the development of this extension or report any issues, visit the [GitHub repository](https://github.com/saquibshaikh14/vscode-add-signature-extensoin). Feel free to raise issues, submit pull requests, or contribute in any way you see fit.
+To contribute to the development of this extension or report any issues, visit the [GitHub repository](https://github.com/saquibshaikh14/vscode-add-signature-extensoin.git). Feel free to raise issues, submit pull requests, or contribute in any way you see fit.
 
 ## Known Issues
 Untitled notes saving causes issues. If a file is saved and then shown as unsaved without modification, closing the file may result in the loss of changes.

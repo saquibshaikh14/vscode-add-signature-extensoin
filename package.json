@@ -1,60 +1,63 @@
 {
-    "name": "vscode-add-signature",
-    "displayName": "Add Signature",
-    "description": "Add signature automatically to every new file created.",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.87.0"
-    },
-    "categories": [
-        "Other",
-        "Snippets"
-    ],
-    "activationEvents": [
-        "onStartupFinished"
-    ],
-    "main": "./out/extension.js",
-    "contributes": {
-        "commands": [
-            {
-                "command": "vscode-add-signature.configure",
-                "title": "VscodeAddSignature: Configure"
-            }
-        ],
-        "configuration": {
-            "title": "VscodeAddSignature",
-            "properties": {
-
-                "vscode-add-signature.enableAddSignature": {
-                    "type": "boolean",
-                    "default": false,
-                    "description": "Enable to add signature text in new creating files"
-                },
-                "vscode-add-signature.signatureText": {
-                    "type": "string",
-                    "default": "add text here",
-                    "markdownDescription": "Enter the signature text to be added at the top of each new file. Use \\n for line breaks.\n\n**Example:**\n```\n/**\\n* author Saquib Shaikh\\n* created on ${DD-MM-YYYY-hh-mm}\\n* github: https://github.com/saquibshaikh14\\n*\ncopyright ${YEAR}\\n**/\n```\n\n**Output:**\n```\n/**\n* author Saquib Shaikh\n* created on 16-03-2024-10-30\n* github: https://github.com/saquibshaikh14\n* copyright 2024\n**/\n```"
-                }
-            }
-        }
-    },
-    "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
-        "pretest": "npm run compile && npm run lint",
-        "lint": "eslint src --ext ts",
-        "test": "vscode-test"
-    },
-    "devDependencies": {
-        "@types/vscode": "^1.87.0",
-        "@types/mocha": "^10.0.6",
-        "@types/node": "18.x",
-        "@typescript-eslint/eslint-plugin": "^7.0.2",
-        "@typescript-eslint/parser": "^7.0.2",
-        "eslint": "^8.56.0",
-        "typescript": "^5.3.3",
-        "@vscode/test-cli": "^0.0.6",
-        "@vscode/test-electron": "^2.3.9"
-    }
+	"name": "vscode-add-signature",
+	"displayName": "Add Signature",
+	"description": "Add signature automatically to every new file created.",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.87.0"
+	},
+	"categories": [
+		"Other",
+		"Snippets"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "vscode-add-signature.configure",
+				"title": "VscodeAddSignature: Configure"
+			}
+		],
+		"configuration": {
+			"title": "VscodeAddSignature",
+			"properties": {
+				"vscode-add-signature.enableAddSignature": {
+					"type": "boolean",
+					"default": false,
+					"description": "Enable to add signature text in new creating files"
+				},
+				"vscode-add-signature.signatureText": {
+					"type": "string",
+					"default": "add text here",
+					"markdownDescription": "Enter the signature text to be added at the top of each new file. Use \\n for line breaks.\n\n**Example:**\n```\n/**\\n* author Saquib Shaikh\\n* created on ${DD-MM-YYYY-hh-mm}\\n* github: https://github.com/saquibshaikh14\\n*\ncopyright ${YEAR}\\n**/\n```\n\n**Output:**\n```\n/**\n* author Saquib Shaikh\n* created on 16-03-2024-10-30\n* github: https://github.com/saquibshaikh14\n* copyright 2024\n**/\n```"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "vscode-test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/saquibshaikh14/vscode-add-signature-extensoin.git"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.87.0",
+		"@types/mocha": "^10.0.6",
+		"@types/node": "18.x",
+		"@typescript-eslint/eslint-plugin": "^7.0.2",
+		"@typescript-eslint/parser": "^7.0.2",
+		"eslint": "^8.56.0",
+		"typescript": "^5.3.3",
+		"@vscode/test-cli": "^0.0.6",
+		"@vscode/test-electron": "^2.3.9"
+	}
 }
