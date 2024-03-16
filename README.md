@@ -1,4 +1,5 @@
 # Vscode Add Signature Extension
+[![Visual Studio Marketplace](https://vsmarketplacebadge.apphb.com/version/saquibshaikh.vscode-add-signature.svg)](https://marketplace.visualstudio.com/items?itemName=saquibshaikh.vscode-add-signature)
 
 ## Description
 The Vscode Add Signature extension automatically adds a preloaded signature to the top of each file whenever it is created. Users can configure the signature text through the extension settings.
@@ -7,16 +8,16 @@ The Vscode Add Signature extension automatically adds a preloaded signature to t
 The extension is activated when Visual Studio Code starts. It listens for the creation of new files and triggers the addition of the signature text.
 
 ## Configuration
+* Open vscode **Command Pallet** by pressing cmd + shift + p in mac or cntrl + shift + p in window.
+* Search `VscodeAddSignature: Configure` and open.
 
-Users can configure the extension through the following settings:
-
+Configure the extension through the following settings:
 - **Enable Add Signature**: Toggle to enable/disable adding the signature text to new files.
 - **Signature Text**: Enter the signature text to be added at the top of each new file. Use `\n` for line breaks.
 
 ### Signature Text Example
 
 Here's an example of how to format the signature text:
-
 ```javaScript
 /**\n* author Saquib Shaikh\n* created on ${DD-MM-YYYY-hh-mm}\n* github: https://github.com/saquibshaikh14\n* copyright ${YEAR}\n**/
 ```

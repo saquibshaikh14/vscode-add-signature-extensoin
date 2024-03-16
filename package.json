@@ -1,8 +1,10 @@
 {
 	"name": "vscode-add-signature",
 	"displayName": "Add Signature",
+    "publisher": "saquibshaikh",
 	"description": "Add signature automatically to every new file created.",
-	"version": "0.0.1",
+	"version": "0.0.2",
+    "icon": "images/icon.png",
 	"engines": {
 		"vscode": "^1.87.0"
 	},
