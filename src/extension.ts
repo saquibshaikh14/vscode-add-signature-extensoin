@@ -85,39 +85,41 @@ async function delay(ms: number) {
 }
 
 function replacePattern(text: string): string {
-	const now = new Date();
-	const year = now.getFullYear().toString();
-	const month = (now.getMonth() + 1).toString().padStart(2, "0");
-	const day = now.getDate().toString().padStart(2, "0");
-	const hours = now.getHours().toString().padStart(2, "0");
-	const minutes = now.getMinutes().toString().padStart(2, "0");
+    const now = new Date();
+    const year = now.getFullYear().toString();
+    const month = (now.getMonth() + 1).toString().padStart(2, "0");
+    const day = now.getDate().toString().padStart(2, "0");
+    const hours = now.getHours().toString().padStart(2, "0");
+    const minutes = now.getMinutes().toString().padStart(2, "0");
 
-	//preserving new line
-	text = text.replace(/\\n/g, "\n");
+    // Preserve new line
+    text = text.replace(/\\n/g, "\n");
 
-	// Replace each component of the date pattern with the corresponding value
-	// Use a regular expression with capturing groups to match any order of date components
-	return text.replace(
-		/\${(DD|MM|YYYY|hh|mm)-?(DD|MM|YYYY|hh|mm)?-?(DD|MM|YYYY|hh|mm)?-?(DD|MM|YYYY|hh|mm)?-?(DD|MM|YYYY|hh|mm)?}/g,
-		(match, p1, p2, p3, p4, p5) => {
-			const components = [p1, p2, p3, p4, p5].filter(Boolean); // Remove undefined components
-			const orderedValues = components.map((component) => {
-				switch (component) {
-					case "DD":
-						return day;
-					case "MM":
-						return month;
-					case "YYYY":
-						return year;
-					case "hh":
-						return hours + "h";
-					case "mm":
-						return minutes + "m";
-					default:
-						return component; // Leave unknown components unchanged
-				}
-			});
-			return orderedValues.join("-"); // Join the ordered values with '-'
-		}
-	);
+    // Replace each component of the date pattern with the corresponding value
+    // Use a regular expression with capturing groups to match any order of date components
+    return text.replace(
+        /\${(DD|MM|YYYY|hh|mm|YEAR)-?(DD|MM|YYYY|hh|mm|YEAR)?-?(DD|MM|YYYY|hh|mm|YEAR)?-?(DD|MM|YYYY|hh|mm|YEAR)?-?(DD|MM|YYYY|hh|mm|YEAR)?}/g,
+        (match, p1, p2, p3, p4, p5) => {
+            const components = [p1, p2, p3, p4, p5].filter(Boolean); // Remove undefined components
+            const orderedValues = components.map((component) => {
+                switch (component) {
+                    case "DD":
+                        return day;
+                    case "MM":
+                        return month;
+                    case "YYYY":
+                        return year;
+                    case "hh":
+                        return hours + "h";
+                    case "mm":
+                        return minutes + "m";
+                    case "YEAR":
+                        return year;
+                    default:
+                        return component; // Leave unknown components unchanged
+                }
+            });
+            return orderedValues.join("-"); // Join the ordered values with '-'
+        }
+    );
 }

@@ -3,7 +3,7 @@
 	"displayName": "Add Signature",
     "publisher": "saquibshaikh",
 	"description": "Add signature automatically to every new file created.",
-	"version": "0.0.2",
+	"version": "0.0.4",
     "icon": "images/icon.png",
 	"engines": {
 		"vscode": "^1.87.0"
@@ -45,7 +45,8 @@
 		"watch": "tsc -watch -p ./",
 		"pretest": "npm run compile && npm run lint",
 		"lint": "eslint src --ext ts",
-		"test": "vscode-test"
+		"test": "vscode-test",
+		"publish": "vsce package && vsce publish"
 	},
 	"repository": {
 		"type": "git",

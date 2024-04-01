@@ -1,9 +1,5 @@
 # Change Log
 
-All notable changes to the "vscode-add-signature" extension will be documented in this file.
+## [0.0.4]
+- Fixed an issue where `${YEAR}` placeholder was not being replaced with the current year.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release

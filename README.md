@@ -1,5 +1,4 @@
 # Vscode Add Signature Extension
-[![Visual Studio Marketplace](https://vsmarketplacebadge.apphb.com/version/saquibshaikh.vscode-add-signature.svg)](https://marketplace.visualstudio.com/items?itemName=saquibshaikh.vscode-add-signature)
 
 ## Description
 The Vscode Add Signature extension automatically adds a preloaded signature to the top of each file whenever it is created. Users can configure the signature text through the extension settings.
