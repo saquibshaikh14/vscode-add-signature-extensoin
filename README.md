@@ -38,6 +38,9 @@ To contribute to the development of this extension or report any issues, visit t
 ## Known Issues
 Untitled notes saving causes issues. If a file is saved and then shown as unsaved without modification, closing the file may result in the loss of changes.
 
+### Limitations
+- Files created using command line commands (`cmd`) will not trigger the `onDidCreate` event, and therefore the signature text will not be automatically added.
+
 ## File Handling
 The extension handles the following file-related operations:
 
