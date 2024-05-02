@@ -89,7 +89,7 @@ async function addSignatureToFile(uri: vscode.Uri) {
 			vscode.window.showErrorMessage(
 				"Unknown error occured adding signature to file"
 			);
-			console.log(error);
+			console.error(error);
 		}
 	}
 }

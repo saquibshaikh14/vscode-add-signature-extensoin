@@ -31,10 +31,10 @@ Here's an example of how to format the signature text:
 
 **Input**
 ```javaScript
- * author Saquib Shaikh
- * created on 02-05-2024-17h-48m
- * github: https://github.com/saquibshaikh14
- * copyright 2024
+* author Saquib Shaikh
+* created on ${DD-MM-YYYY-hh-mm}
+* github: https://github.com/saquibshaikh14
+* copyright ${YEAR}
 ```
 
 **File output**
@@ -61,10 +61,10 @@ Here's an example of how to format the signature text:
 #### Example without \*
 **Input**
 ```javaScript
- author Saquib Shaikh
- created on 02-05-2024-17h-48m
- github: https://github.com/saquibshaikh14
- copyright 2024
+author Saquib Shaikh
+created on ${DD-MM-YYYY-hh-mm}
+github: https://github.com/saquibshaikh14
+copyright ${YEAR}
 ```
 ***javascript & typescript***
 ```javaScript
