@@ -157,7 +157,7 @@ function generateComment(fileExtension: string, parsedSignatureText: string) {
 		".kts": "/*\n",
 		".php": "/*\n",
 		".c": "/*\n",
-	 ".py": '"""\n"""\n',
+		".py": '"""\n',
 		// Add more file extensions and their corresponding comment block formats as needed
 	};
 
@@ -185,7 +185,9 @@ function generateComment(fileExtension: string, parsedSignatureText: string) {
 	});
 
 	commentBlock += `${
-		commentFormat.startsWith("<!--")
+		commentFormat.startsWith('"""')
+			? '"""'
+			: commentFormat.startsWith("<!--")
 			? "-->"
 			: commentFormat.startsWith("=begin")
 			? "=end"
