@@ -157,7 +157,7 @@ function generateComment(fileExtension: string, parsedSignatureText: string) {
 		".kts": "/*\n",
 		".php": "/*\n",
 		".c": "/*\n",
-		".py": '"""\n',
+	 ".py": '"""\n"""\n',
 		// Add more file extensions and their corresponding comment block formats as needed
 	};
 
