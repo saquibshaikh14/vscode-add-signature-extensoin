@@ -1,7 +1,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from "vscode";
-import constans from "./constans";
+import constants from "./constants";
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -39,9 +39,29 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 	);
 
+	let addSignatureDisposable = vscode.commands.registerCommand(
+		"vscode-add-signature.addSignature",
+		async () => {
+			const editor = vscode.window.activeTextEditor;
+			if (editor) {
+				const document = editor.document;
+				const uri = document.uri;
+				let displaymessage = await addSignatureToFile(uri);
+				if (displaymessage) {
+					vscode.window.showInformationMessage(displaymessage);
+				}
+			} else {
+				vscode.window.showInformationMessage(
+					"No file is currently opened."
+				);
+			}
+		}
+	);
+
 	context.subscriptions.push(
 		onCreateFilesDisposable,
-		commandConfigurationDisposable
+		commandConfigurationDisposable,
+		addSignatureDisposable
 	);
 
 	// addSignatureToFile(null);
@@ -54,8 +74,9 @@ export function deactivate() {}
 
 async function addSignatureToFile(uri: vscode.Uri) {
 	const config = vscode.workspace.getConfiguration("vscode-add-signature");
-	let enableAddSignature = config.get(constans.ENABLE_ADD_SIGNATURE) || false;
-	let signatureText = config.get<string>(constans.SIGNATURE_TEXT) || "";
+	let enableAddSignature =
+		config.get(constants.ENABLE_ADD_SIGNATURE) || false;
+	let signatureText = config.get<string>(constants.SIGNATURE_TEXT) || "";
 
 	const fileExtension = uri.fsPath
 		.toLowerCase()
@@ -65,13 +86,13 @@ async function addSignatureToFile(uri: vscode.Uri) {
 	const comment = generateComment(fileExtension, parsedSignatureText);
 	if (!comment) {
 		//if file extension is not supported dont add anything
-		return;
+		return "Add Signature Error: File not supported";
 	}
 	if (!enableAddSignature) {
-		return;
+		return "Please enable extension from settings: vscode-add-signature";
 	}
 	//adding delay. having issue with new untitle file created and saved
-	await delay(constans.DELAY_500);
+	await delay(constants.DELAY_500);
 
 	try {
 		const document = await vscode.workspace.openTextDocument(uri);
@@ -91,6 +112,9 @@ async function addSignatureToFile(uri: vscode.Uri) {
 			);
 			console.error(error);
 		}
+	} finally {
+		//no action needed
+		return false;
 	}
 }
 

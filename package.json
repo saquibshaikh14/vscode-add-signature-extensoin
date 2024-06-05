@@ -21,6 +21,10 @@
 			{
 				"command": "vscode-add-signature.configure",
 				"title": "VscodeAddSignature: Configure"
+			},
+			{
+				"command": "vscode-add-signature.addSignature",
+				"title": "VscodeAddSignature: Add Signature"
 			}
 		],
 		"configuration": {
@@ -28,14 +32,14 @@
 			"properties": {
 				"vscode-add-signature.enableAddSignature": {
 					"type": "boolean",
-					"default": false,
+					"default": true,
 					"description": "Enable to add signature text in new creating files"
 				},
 				"vscode-add-signature.signatureText": {
 					"editPresentation": "multilineText",
 					"type": "string",
 					"default": "* author Saquib Shaikh\n* created on ${DD-MM-YYYY-hh-mm}\n* github: https://github.com/saquibshaikh14\n* copyright ${YEAR}",
-					"markdownDescription": "Enter the signature text to be added at the top of each new file.\n\n**Example**\n```\n* author Saquib Shaikh\n* created on ${DD-MM-YYYY-hh-mm}\n* github: https://github.com/saquibshaikh14\n* copyright ${YEAR}\n```\n\n**Output:**\n```\n/**\n* author Saquib Shaikh\n* created on 16-03-2024-10-30\n* github: https://github.com/saquibshaikh14\n* copyright 2024\n**/\n```"
+					"markdownDescription": "Enter the signature text to be added at the top of each new file.\n\n*Example*\n\n* author Saquib Shaikh\n* created on ${DD-MM-YYYY-hh-mm}\n* github: https://github.com/saquibshaikh14\n* copyright ${YEAR}\n\n\n*Output:*\n\n/**\n* author Saquib Shaikh\n* created on 16-03-2024-10-30\n* github: https://github.com/saquibshaikh14\n* copyright 2024\n**/\n"
 				}
 			}
 		}
