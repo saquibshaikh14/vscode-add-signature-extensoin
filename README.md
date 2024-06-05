@@ -21,7 +21,7 @@ Configure the extension through the following settings:
 **Note:** To use new line without ```*``` press ```Enter``` and start typing. See **Example 2**
 
 ### Supported file types
-```.js``` ```.ts``` ```.rb``` ```.rs``` ```.php``` ```.java``` ```.kt``` ```.kts``` ```.c``` ```.html``` ```.css```
+```.js``` ```.ts``` ```.rb``` ```.rs``` ```.php``` ```.java``` ```.kt``` ```.kts``` ```.c``` ```.html``` ```.css``` ```.py```
 
 ### Signature Text Example
 
@@ -66,6 +66,8 @@ created on ${DD-MM-YYYY-hh-mm}
 github: https://github.com/saquibshaikh14
 copyright ${YEAR}
 ```
+**File output**
+
 ***javascript & typescript***
 ```javaScript
 /**

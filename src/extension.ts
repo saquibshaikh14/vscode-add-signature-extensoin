@@ -184,6 +184,7 @@ function generateComment(fileExtension: string, parsedSignatureText: string) {
 		commentBlock += ` ${line}\n`;
 	});
 
+	//Comment closing
 	commentBlock += `${
 		commentFormat.startsWith('"""')
 			? '"""'

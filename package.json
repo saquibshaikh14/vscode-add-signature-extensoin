@@ -3,7 +3,7 @@
 	"displayName": "Add Signature",
 	"publisher": "saquibshaikh",
 	"description": "Add signature automatically to every new file created.",
-	"version": "0.0.4",
+	"version": "1.0.0",
 	"icon": "images/icon.png",
 	"engines": {
 		"vscode": "^1.87.0"
