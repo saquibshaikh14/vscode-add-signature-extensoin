@@ -7,13 +7,19 @@ The Vscode Add Signature extension automatically adds a preloaded signature to t
 
 [Marketplace Download Link](https://marketplace.visualstudio.com/items?itemName=saquibshaikh.vscode-add-signature)
 
-## Activation
+## Activation & Uses
 
-The extension is activated when Visual Studio Code starts. It listens for the creation of new files using vscode file explorer  and triggers the addition of the signature text.
+The extension is activated when Visual Studio Code starts. It listens for the creation of new files using vscode file explorer  and generate signature text.
 
-To add signature manually open vscode **Command Pallet** by pressing `cmd + shift + p` in mac or `ctrl + shift + p` in window. Search `VscodeAddSignature: Add Signature` and press enter.
+Use shortcut `cmd + shift + g` in mac or `ctrl + shift + g` to generate signature manually in opened file.
 
-**NOTES:** Signature will be added for supported file types and extension is enabled from extension setting.
+*OR*
+
+Open vscode **Command Pallet** by pressing `cmd + shift + p` in mac or `ctrl + shift + p` in window. Search `VscodeAddSignature: Add Signature` and press enter.
+
+> **Note:** Signature will be added for supported file types only if extension is enabled from extension setting.
+>
+> For **Keybinding Conflict** please refer [Detecting keybinding conflicts](https://code.visualstudio.com/docs/getstarted/keybindings#_detecting-keybinding-conflicts)
 
 ## Configuration
 
