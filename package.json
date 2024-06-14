@@ -27,6 +27,13 @@
 				"title": "VscodeAddSignature: Add Signature"
 			}
 		],
+		"keybindings": [
+			{
+				"key": "ctrl+shift+g",
+				"mac": "cmd+shift+g",
+				"command": "vscode-add-signature.addSignature"
+			}
+		],
 		"configuration": {
 			"title": "VscodeAddSignature",
 			"properties": {
